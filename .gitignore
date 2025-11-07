@@ -1,0 +1,140 @@
+# ====================================
+# Laravel Framework
+# ====================================
+
+/vendor/
+/node_modules/
+.env
+.env.*.local
+
+# Laravel storage & cache
+/public/storage
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/bootstrap/cache/*.php
+
+# Laravel build (Vite / Mix)
+public/hot
+/public/build
+/public/js/*.map
+/public/css/*.map
+
+# ====================================
+# Docker
+# ====================================
+
+# Docker compose overrides and envs
+docker-compose.override.yml
+.docker/
+docker/
+**/Dockerfile*
+
+# MySQL data persistence
+mysql/data/
+mysql/logs/
+mysql/conf.d/
+
+# phpMyAdmin configs
+phpmyadmin/sessions/
+phpmyadmin/config.user.inc.php
+
+# Nginx logs and cache
+nginx/logs/
+nginx/conf.d/*.bak
+
+# PHP logs or cache
+php/logs/
+php/cache/
+
+# ====================================
+# IDE / OS / Misc
+# ====================================
+
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+*.log
+
+# Node / npm / Yarn logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# ====================================
+# Laravel Framework
+# ====================================
+
+/vendor/
+/node_modules/
+.env
+.env.*.local
+
+# Laravel storage & cache
+/public/storage
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/bootstrap/cache/*.php
+
+# Laravel build (Vite / Mix)
+public/hot
+/public/build
+/public/js/*.map
+/public/css/*.map
+
+# ====================================
+# Docker
+# ====================================
+
+# Docker compose overrides and envs
+docker-compose.override.yml
+.docker/
+docker/
+**/Dockerfile*
+
+# MySQL data persistence
+mysql/data/
+mysql/logs/
+mysql/conf.d/
+
+# phpMyAdmin configs
+phpmyadmin/sessions/
+phpmyadmin/config.user.inc.php
+
+# Nginx logs and cache
+nginx/logs/
+nginx/conf.d/*.bak
+
+# PHP logs or cache
+php/logs/
+php/cache/
+
+# ====================================
+# IDE / OS / Misc
+# ====================================
+
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+*.log
+
+# Node / npm / Yarn logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+
+
+
+
