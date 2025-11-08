@@ -33,9 +33,9 @@ docker/
 **/Dockerfile*
 
 # MySQL data persistence
-mysql/data/
-mysql/logs/
-mysql/conf.d/
+docker/mysql/data/
+docker/mysql/logs/
+docker/mysql/conf.d/
 
 # phpMyAdmin configs
 phpmyadmin/sessions/
