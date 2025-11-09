@@ -56,19 +56,33 @@
     border-radius: 6px;
     background: #f9f7f5;
     font-size: 14px;
+    font-family: inherit;  /* ← これが重要 */
     color: #6b5a4a;
 }
-
+button.btn-search,
+a.btn-reset,
+a.btn-export {
+  -webkit-appearance: none;       /* ブラウザ固有の装飾を消す */
+  appearance: none;
+  box-sizing: border-box;         /* 高さ計算を統一 */
+  line-height: 1;                 /* 高さ揃え */
+  vertical-align: middle;         /* ベースラインずれ防止 */
+}
 .btn-search,
 .btn-reset,
 .btn-export {
+    display: inline-flex;        /* フレックス化 */
+    align-items: center;         /* 縦中央揃え */
+    -webkit-appearance: none;
+    appearance: none;
     height: 35px;
     background: #f2e5d9;
     color: #6b5a4a;
     border: 1px solid #d3c1ae;
-    padding: 8px 16px;
+    padding: 0px 16px;
     border-radius: 6px;
     font-size: 14px;
+    font-family: inherit;  /* ← これが重要 */
     text-decoration: none;
     cursor: pointer;
     transition: 0.2s;
