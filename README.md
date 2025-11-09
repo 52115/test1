@@ -35,6 +35,3 @@ php artisan key:generate
 
 # マイグレーション & ダミーデータ投入
 php artisan migrate:fresh --seed
-
-# npmビルド（必要に応じて）
-npm install && npm run dev
