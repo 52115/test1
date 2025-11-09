@@ -1,49 +1,51 @@
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: #fff;
-  color: #6b4c3b;
-  text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #4b3f32;
+    background: #fff;
+    text-align: center;
 }
 
-header {
-  font-size: 22px;
-  padding: 40px 0 10px;
-  border-bottom: 1px solid #eee;
+.confirm-container {
+    width: 70%;
+    margin: 40px auto;
 }
 
-table {
-  width: 700px;
-  margin: 40px auto;
-  border-collapse: collapse;
-  font-size: 14px;
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-th, td {
-  border: 1px solid #e5e5e5;
-  padding: 12px 20px;
+h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-th {
-  background: #d3c4b6;
-  width: 180px;
-  text-align: left;
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
 }
 
-td {
-  background: #fafafa;
-  text-align: left;
+.confirm-table th, .confirm-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.confirm-table th {
+    background-color: #f3ede6;
+    width: 25%;
+}
+
+.btn-area {
+    text-align: center;
 }
 
 button {
-  margin: 20px 10px;
-  background: #8b7b6a;
-  color: white;
-  padding: 10px 40px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
+    background-color: #7b6652;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    margin: 0 10px;
+    cursor: pointer;
 }

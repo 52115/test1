@@ -10,19 +10,41 @@ class Contact extends Model
     use HasFactory;
 
     protected $fillable = [
-        'category_id',
-        'first_name',
         'last_name',
+        'first_name',
         'gender',
         'email',
-        'tel',
+        'tel1',
+        'tel2',
+        'tel3',
         'address',
         'building',
-        'detail'
+        'category_id',
+        'content',
     ];
 
+    /**
+     * カテゴリとのリレーション
+     * 1件のお問い合わせは1つのカテゴリに属する
+     */
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * 電話番号を結合して表示するアクセサ
+     */
+    public function getFullTelAttribute()
+    {
+        return "{$this->tel1}-{$this->tel2}-{$this->tel3}";
+    }
+
+    /**
+     * 氏名を結合して表示するアクセサ
+     */
+    public function getFullNameAttribute()
+    {
+        return "{$this->last_name} {$this->first_name}";
     }
 }

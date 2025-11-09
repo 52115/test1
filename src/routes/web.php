@@ -5,9 +5,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 
 // お問い合わせフォーム関連
-Route::get('/', [ContactController::class, 'index'])->name('index');
-Route::post('/confirm', [ContactController::class, 'confirm'])->name('confirm');
-Route::post('/thanks', [ContactController::class, 'store'])->name('thanks');
+Route::get('/', [ContactController::class, 'index'])->name('contact.form');
+Route::post('/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
+Route::post('/store', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
+
 
 // Fortifyの認証後のみアクセスできるルート
 Route::middleware(['auth'])->group(function () {

@@ -10,14 +10,17 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable(false);
-            $table->string('gender')->nullable(false); // 男性・女性・その他
-            $table->string('email')->nullable(false);
-            $table->string('tel')->nullable();
-            $table->string('address')->nullable();
+            $table->string('last_name', 8);
+            $table->string('first_name', 8);
+            $table->string('gender', 10);
+            $table->string('email');
+            $table->string('tel1', 5);
+            $table->string('tel2', 5);
+            $table->string('tel3', 5);
+            $table->string('address');
             $table->string('building')->nullable();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->text('detail')->nullable(false);
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->string('content', 120);
             $table->timestamps();
         });
     }

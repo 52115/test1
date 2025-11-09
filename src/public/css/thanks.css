@@ -1,0 +1,22 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #4b3f32;
+    background: #fff;
+    text-align: center;
+}
+
+.thanks-container {
+    margin-top: 150px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-area a {
+    background-color: #7b6652;
+    color: #fff;
+    padding: 10px 40px;
+    text-decoration: none;
+}
