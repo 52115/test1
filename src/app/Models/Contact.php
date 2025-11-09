@@ -20,7 +20,7 @@ class Contact extends Model
         'address',
         'building',
         'category_id',
-        'content',
+        'detail',
     ];
 
     /**

@@ -28,6 +28,15 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // 🟢 ログイン画面を返すビューを指定
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
+        // 🟢 新規登録画面を指定
+        Fortify::registerView(function () {
+        return view('auth.register');
+        });
+
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);

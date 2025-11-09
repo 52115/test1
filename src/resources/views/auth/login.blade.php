@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('auth_layouts.login')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 <div class="login-container">
-    <h1 class="page-title">ログイン</h1>
+        <h1 class="page-title">ログイン</h1>
 
-    <form method="POST" action="{{ route('login') }}" class="login-form">
+    <form method="POST" action="{{ route('login') }}" class="login-form" novalidate>
         @csrf
 
         <div class="form-group">
@@ -27,8 +27,8 @@
 
         <div class="btn-group">
             <button type="submit" class="btn-login">ログイン</button>
-            <a href="{{ route('register') }}" class="btn-link">新規登録はこちら</a>
         </div>
     </form>
 </div>
 @endsection
+

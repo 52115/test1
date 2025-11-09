@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('last_name', 8);
             $table->string('first_name', 8);
-            $table->string('gender', 10);
+            $table->integer('gender');
             $table->string('email');
             $table->string('tel1', 5);
             $table->string('tel2', 5);
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('building')->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->string('content', 120);
+            $table->string('detail', 120);
             $table->timestamps();
         });
     }

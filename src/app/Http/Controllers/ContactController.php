@@ -28,7 +28,11 @@ class ContactController extends Controller
 
         // カテゴリ名を取得
         $category = Category::find($validated['category_id']);
-        $validated['category_name'] = $category ? $category->category_name : '';
+        $validated['category_content'] = $category ? $category->content : '';
+
+        // 性別を文字列に変換
+        $genderLabels = [1 => '男性', 2 => '女性', 3 => 'その他'];
+        $validated['gender_label'] = $genderLabels[$validated['gender']] ?? '';
 
         // セッションに入力値を保持（確認ページから戻れるように）
         $request->session()->put('contact_data', $validated);

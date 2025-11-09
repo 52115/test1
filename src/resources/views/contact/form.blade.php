@@ -17,16 +17,21 @@
             </div>
         </div>
         <div class="error">
-            @error('last_name'){{ $message }}@enderror
-            @error('first_name'){{ $message }}@enderror
+            {{-- 共通エラーがあればそれだけ表示（個別は表示しない） --}}
+        @if($errors->has('name_both'))
+            {{ $errors->first('name_both') }}
+        @else
+            @error('last_name') {{ $message }} @enderror
+            @error('first_name') {{ $message }} @enderror
+        @endif
         </div>
 
         <div class="form-group">
             <label>性別 <span class="required">※</span></label>
             <div class="radio-group">
-                <label><input type="radio" name="gender" value="男性" {{ old('gender')=='男性'?'checked':'' }}>男性</label>
-                <label><input type="radio" name="gender" value="女性" {{ old('gender')=='女性'?'checked':'' }}>女性</label>
-                <label><input type="radio" name="gender" value="その他" {{ old('gender')=='その他'?'checked':'' }}>その他</label>
+                <label><input type="radio" name="gender" value="1" {{ old('gender')=='1'?'checked':'' }}>男性</label>
+                <label><input type="radio" name="gender" value="2" {{ old('gender')=='2'?'checked':'' }}>女性</label>
+                <label><input type="radio" name="gender" value="3" {{ old('gender')=='3'?'checked':'' }}>その他</label>
             </div>
         </div>
         <div class="error">
@@ -50,7 +55,14 @@
             </div>
         </div>
         <div class="error">
-            @error('tel1'){{ $message }}@enderror
+            {{-- 共通電話番号エラーがある場合はそれのみ表示 --}}
+        @if($errors->has('tel_all'))
+        {{ $errors->first('tel_all') }}
+        @else
+        @error('tel1') {{ $message }} @enderror
+        @error('tel2') {{ $message }} @enderror
+        @error('tel3') {{ $message }} @enderror
+        @endif
         </div>
 
         <div class="form-group">
@@ -72,7 +84,7 @@
                 <option value="">選択してください</option>
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}" {{ old('category_id')==$category->id?'selected':'' }}>
-                        {{ $category->name }}
+                        {{ $category->content }}
                     </option>
                 @endforeach
             </select>
@@ -83,14 +95,14 @@
 
         <div class="form-group">
             <label>お問い合わせ内容 <span class="required">※</span></label>
-            <textarea name="content" rows="4" placeholder="お問い合わせ内容を入力してください">{{ old('content') }}</textarea>
+            <textarea name="detail" rows="12" placeholder="お問い合わせ内容を入力してください">{{ old('content') }}</textarea>
         </div>
         <div class="error">
-            @error('content'){{ $message }}@enderror
+            @error('detail'){{ $message }}@enderror
         </div>
 
         <div class="btn-area">
-            <button type="submit">確認画面</button>
+            <button type="submit">確認画面へ</button>
         </div>
     </form>
 </div>

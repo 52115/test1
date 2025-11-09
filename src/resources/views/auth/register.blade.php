@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('auth_layouts.register')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 
 <div class="register-container">
-    <h1 class="page-title">会員登録</h1>
+    <h1 class="page-title">新規登録</h1>
 
-    <form method="POST" action="{{ route('register') }}" class="register-form">
+    <form method="POST" action="{{ route('register') }}" class="register-form" novalidate>
         @csrf
 
         <div class="form-group">
@@ -33,9 +33,13 @@
             @enderror
         </div>
 
+        <div class="form-group">
+            <label for="password_confirmation">パスワード（確認）<span class="required">必須</span></label>
+            <input id="password_confirmation" type="password" name="password_confirmation" required>
+        </div>
+
         <div class="btn-group">
             <button type="submit" class="btn-register">登録</button>
-            <a href="{{ route('login') }}" class="btn-link">ログインはこちら</a>
         </div>
     </form>
 </div>
